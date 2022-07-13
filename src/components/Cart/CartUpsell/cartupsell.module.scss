@@ -1,0 +1,33 @@
+.upsell{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 50px;
+  font-size: 14.5px;
+  line-height: 23px;
+  margin-bottom: 30px;
+  & p{
+    font-weight: 400;
+    max-width: 20ch;
+    & strong{
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--btn);
+    }
+  }
+  & button{
+    border-radius: 5px;
+    border: 1px solid var(--foreground-60);
+    padding: 6px 18px;
+    align-self: center;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color .5s ease;
+  }
+}
+.upactive{
+  text-decoration: underline;
+  border: 1px solid #fff !important;
+  font-weight: 400 !important;
+}
+
+@import './cartupsellMQ'

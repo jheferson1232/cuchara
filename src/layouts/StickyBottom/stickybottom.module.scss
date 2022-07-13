@@ -1,0 +1,160 @@
+.section{
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid var(--foreground-10);
+  z-index: 2;
+  padding: 7px 0;
+  transition: all .4s ease;
+  transition-property: opacity, transform;
+}
+.hide{
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.container{
+  width: 92%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  height: 100%;
+}
+
+.chat{
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--btn_border);
+  border-radius: 5px;
+  text-align: left;
+  line-height: 19px;
+  font-size: 13px;
+  & svg{
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
+  }
+  & span{
+    margin-left: 7px;
+  }
+  &:active{
+    background-color: var(--foreground_light2);
+  }
+}
+
+.product{
+  display: none;
+}
+
+.buy{
+  grid-column: 2/3;
+  &_ship{
+    display: none;
+  }
+  &_button{
+    background-color: var(--btn);
+    width: 100%;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 5px;
+    animation: wobble 2.5s 1s ease infinite;
+    cursor: pointer;
+    padding: 10px 0;
+    height: 100%;
+    &:active{
+      opacity: 0.75;
+    }
+  }
+}
+
+@media (min-width: 800px){
+  .container{
+    gap: 30px;
+  }
+  .chat{
+    display: none;
+  }
+  .product{
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: repeat(3, auto) 1fr;
+    align-items: center;
+    grid-template-areas: 
+    'image name name name'
+    'image nowPrice discount message';
+    &_image{
+      grid-area: image;
+      position: relative;
+      width: 55px;
+      height: 55px;
+      border-radius: 5px;
+      border: 1px solid var(--foreground_light2);
+      overflow: hidden;
+      margin-right: 15px;
+    }
+    &_name{
+      grid-area: name;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 14px;
+      align-self: flex-end;
+    }
+    &_nowPrice{
+      grid-area: nowPrice;
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 600;
+      margin-right: 7px;
+    }
+    &_discount{
+      grid-area: discount;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: #ECFAEE;
+      color: #009714;
+      border-radius: 5px;
+      padding: 2px 5px;
+      margin-right: 7px;
+    }
+    &_message{
+      grid-area: message;
+      font-size: 14px;
+    }
+  }
+  .buy{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    &_ship{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 14px;
+      & strong{
+        font-weight: 600;
+      }
+    }
+    &_button{
+      height: auto;
+      align-self: center;
+    }
+  }
+}
+
+@keyframes wobble {
+  0% { transform: translateX(0%); }
+  10% { transform: translateX(-3px); }
+  20% { transform: translateX(2.5px); }
+  30% { transform: translateX(-2px); }
+  40% { transform: translateX(1.5px); }
+  50% { transform: translateX(-1px); }
+  100% { transform: translateX(0.5px); }
+}

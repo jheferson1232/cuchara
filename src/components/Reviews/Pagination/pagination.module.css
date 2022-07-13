@@ -1,0 +1,22 @@
+.section{
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.item{
+  border-radius: 5px;
+  border: 1px solid var(--foreground-20);
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .5s ease;
+}
+.is_selected{
+  background-color: var(--foreground-100);
+  border: 1px solid var(--foreground-100);
+  color: #fff;
+}

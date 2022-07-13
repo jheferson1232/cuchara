@@ -1,0 +1,22 @@
+@media (min-width: 800px){
+  .cart{
+    font-size: 17px;
+    grid-template-columns: 70px 1fr auto;
+  }
+  .form{
+    & input, & select{
+      font-size: 16px;
+    }
+  }
+  .taxes{
+    row-gap: 15px;
+  }
+  .taxes_item{
+    & p{
+      font-size: 17px;
+    }
+    & strong{
+      font-size: 18px;
+    }
+  }
+}

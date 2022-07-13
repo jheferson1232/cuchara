@@ -1,0 +1,10 @@
+/* Media Queries */
+@media (min-width: 800px) {
+  .section{
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+  }
+  .container{
+    padding: 5px 0;
+  }
+}

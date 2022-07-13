@@ -1,0 +1,107 @@
+.before{
+  text-decoration: line-through;
+  font-size: 18px;
+  color: var(--foreground-40);
+  margin-bottom: -5px;
+}
+
+.price{
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  & p{
+    font-size: 30px;
+    font-weight: 600;
+  }
+  & span{
+    color: var(--btn);
+    margin-left: 10px;
+    font-weight: 500;
+  }
+}
+
+.engage{
+  position: absolute;
+  width: 24ch;
+  background-color: #fff;
+  z-index: 1;
+  top: 0;
+  font-size: 15px;
+  margin-bottom: -1.5em;
+  font-weight: 500;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  & strong{
+    font-weight: 600;
+    color: var(--danger);
+    text-align: left;
+    display: inline-block;
+    width: 10ch;
+  }
+}
+
+.features{
+  position: relative;
+  display: grid;
+  row-gap: 25px;
+  border: 1px solid var(--foreground-20);
+  border-radius: 5px;
+  padding: 45px 15px 30px 15px;
+}
+
+.item{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 15px;
+  & h3{
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  & strong{
+    font-weight: 600;
+  }
+  & svg{
+    color: var(--btn);
+  }
+}
+.sepline{
+  width: 1px;
+  height: 25px;
+  background-color: var(--foreground-20);
+  margin: 0 auto;
+}
+
+.button{
+  font-weight: 500;
+  background-color: var(--btn);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: wobble 2.5s 1s ease infinite;
+  & svg{
+    margin-right: 10px;
+  }
+  &:active{
+    opacity: 0.75;
+  }
+}
+
+
+@keyframes wobble {
+  0% { transform: translateX(0%); }
+  10% { transform: translateX(-3px); }
+  20% { transform: translateX(2.5px); }
+  30% { transform: translateX(-2px); }
+  40% { transform: translateX(1.5px); }
+  50% { transform: translateX(-1px); }
+  100% { transform: translateX(0.5px); }
+}
+
+@import './buyMQ'

@@ -1,0 +1,54 @@
+.section{
+  width: 92%;
+  margin: 0 auto;
+  padding: 25px 0;
+  text-align: center;
+}
+.section h3{
+  margin-bottom: 10px;
+}
+.variant_container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 20px 0 30px 0;
+}
+.variant_option{
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid var(--foreground-20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .5s ease;
+}
+.variant_active{
+  background-color: var(--foreground-100);
+  border: 1px solid var(--foreground-100);
+  color: #fff;
+}
+
+.image{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0;
+}
+.image::after{
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+.section button{
+  background-color: var(--btn);
+  width: 100%;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}

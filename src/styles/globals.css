@@ -1,0 +1,38 @@
+:root{
+  --foreground-100: hsl(0, 0%, 20%);
+  --foreground-80: hsl(0, 0%, 30%);
+  --foreground-60: hsl(0, 0%, 40%);
+  --foreground-40: hsl(0, 0%, 60%);
+  --foreground-20: hsl(0, 0%, 80%);
+  --foreground-10: hsl(0, 0%, 90%);
+
+
+  --white1: #fff;
+  --white2: #D8D8D8;
+
+  --btn_foreground: var(--foreground);
+  --btn_border: #cccccc;
+
+  --btn: #009714;
+  --danger: #ff4242;
+}
+
+body {
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: var(--foreground-100);
+}
+
+/* Swiper Overrides */
+.swiper-pagination-bullet{
+  background-color: var(--foreground-100) !important;
+}
+.swiper-pagination-bullets{
+  bottom: 5px !important;
+}
+
+@media (min-width: 800px ){
+  .swiper-pagination-bullet{
+    display: none !important;
+  }
+}

@@ -1,0 +1,42 @@
+.container{
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  display: grid;
+  grid-template-areas: 
+  'image'
+  'children';
+  & p{
+    font-size: 16px;
+    line-height: 30px;
+    & strong{
+      font-weight: 600;
+    }
+  }
+  & h2{
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 800;
+  }
+}
+.image_wrapper{
+  grid-area: image;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  &::after{
+    content: '';
+    display: block;
+    padding-bottom: 70%;
+  }
+}
+.children{
+  grid-area: children;
+  & h2{
+    margin-bottom: 10px;
+  }
+}
+
+@import './itlandingMQ'

@@ -1,0 +1,51 @@
+.fimageBG{
+  width: 100%;
+}
+.fimageBG::after{
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+.fimage{
+  position: absolute;
+  width: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -46%);
+}
+
+.fimage::after{
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+.image{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.image::after{
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+@media (min-width: 600px){
+  .image::after{
+    content: '';
+    display: block;
+    padding-bottom: 100vh;
+  }
+  .fimageBG::after{
+    content: '';
+    display: block;
+    padding-bottom: 100vh;
+  }
+  .fimage{
+    width: 60%;
+    transform: translate(-50%, -50%);
+  }
+}

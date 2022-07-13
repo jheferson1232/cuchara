@@ -1,0 +1,17 @@
+.top{
+  display: grid;
+  grid-template-columns: 1fr 25px;
+  column-gap: 20px;
+  align-items: center;
+}
+.body{
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s ease;
+  transition-property: max-height, margin-top;
+}
+.bodyopened{
+  margin-top: 10px;
+  max-height: 200px;
+  transition: all 1s ease;
+}

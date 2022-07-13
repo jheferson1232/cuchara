@@ -1,0 +1,26 @@
+.section{
+  width: 92%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.section h2{
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media (min-width: 800px){
+  .section{
+    width: 100%;
+    padding: 50px 0;
+  }
+  .section h2{
+    margin-bottom: 40px;
+  }
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+}

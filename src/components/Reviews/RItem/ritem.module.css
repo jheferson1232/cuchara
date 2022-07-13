@@ -1,0 +1,65 @@
+.container{
+  padding: 25px 0;
+  border-bottom: 1px solid var(--foreground-20);
+}
+.cont_rtl .image{
+  float: left;
+  margin: 0 5% 2% 0;
+}
+.person{
+  width: 55%;
+  display: inline-flex;
+  gap: 7px;
+  grid-template-areas:
+  'avatar name'
+  'avatar sc5';
+  align-items: center;
+}
+.avatar{
+  position: relative;
+  overflow: hidden;
+  background-color: var(--foreground-10);
+  border-radius: 50%;
+  grid-area: avatar;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+}
+.name{
+  font-weight: 600;
+  line-height: normal;
+  grid-area: name;
+  margin-bottom: 5px;
+}
+.sc5{
+  grid-area: sc5;
+}
+.body{
+  grid-area: body;
+  margin-top: 7px;
+  color: var(--foreground-80);
+}
+.image{
+  width: 40%;
+  position: relative;
+  grid-area: image;
+  background-color: var(--foreground-20);
+  border-radius: 10px;
+  overflow: hidden;
+  float: right;
+  margin: 0 0 2% 5%;
+  max-width: 200px;
+}
+.image::after{
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+@media (min-width: 800px){
+  .cont_rtl .image{
+    float: right;
+    margin: 0 0 2% 5%;
+  }
+}

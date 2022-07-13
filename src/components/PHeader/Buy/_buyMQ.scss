@@ -1,0 +1,45 @@
+@media (min-width: 800px){
+  .before{
+    font-size: 20px;
+    margin-bottom: -5px;
+  }
+  .message{
+    font-size: 16px;
+  }
+  .price{
+    & p{
+      font-size: 36px;
+      margin-bottom: -5px;
+    }
+    & span{
+      font-size: 20px;
+    }
+  }
+  .engage{
+    font-size: 16px;
+  }
+  .features{
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    border-radius: 0;
+    border: 0;
+    border-top: 1px solid var(--btn_border);
+    padding: 45px 0px 30px 0px;
+  }
+  .sepline{
+    height: 0;
+  }
+  .button{
+    font-size: 18px;
+    padding: 15px;
+  }
+  .item{
+    & h3{
+      font-size: 16px;
+    }
+    & svg{
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
