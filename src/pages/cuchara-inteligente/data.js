@@ -1,7 +1,7 @@
 /* import { revs } from './revs.js' */
 
 export const data = {
-  productName: 'hola amigo',
+  productName: 'hola amigossfdfdsf ',
   defs: ['unidad', 'unidades'],
   wpDef: 'la *Cuchara Medidora Inteligente con Pantalla LCD*',
   price: 66600,
